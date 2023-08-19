@@ -1,0 +1,17 @@
+export const Fonts = {
+  Black: 'Metropolis-Black',
+  BlackItalic: 'Metropolis-BlackItalic',
+  Bold: 'Metropolis-Bold',
+  BoldItalic: 'Metropolis-BoldItalic',
+  XBold: 'Metropolis-ExtraBold',
+  XBoldItalic: 'Metropolis-ExtraBoldItalic',
+  Xlight: 'Metropolis-ExtraLight',
+  XlightItalic: 'Metropolis-ExtraLightItalic',
+  Medium: 'Metropolis-Medium',
+  MediumItalic: 'Metropolis-MediumItalic',
+  Regular: 'Metropolis-Regular',
+  SemiBold: 'Metropolis-SemiBold',
+  SemiBoldItalic: 'Metropolis-SemiBoldItalic',
+  Thin: 'Metropolis-Thin',
+  ThinItalic: 'Metropolis-ThinItalic',
+};

@@ -1,0 +1,17 @@
+export const Colors = {
+  dark: '#000',
+  light: '#fff',
+  effect: '#f8f9fb',
+  base: '#181A20',
+  overlay: 'rgba(0,0,0,0.3)',
+  overlay2: 'rgba(39,41,48,1)',
+  lightshade: '#f8f8f8',
+  shade: '#D8D8D8',
+  grey: 'grey',
+  darkshade: '#2d2d2d',
+  btnBg: '#246BFD',
+  borderColor: '#373A44',
+  fontGray: '#979797',
+  btnUnSelect: '#246BFD',
+  fontColorGray: 'rgba(139,141,148,1)',
+};
