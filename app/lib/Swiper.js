@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Text,
   View,
-  ViewPropTypes,
+  // ViewPropTypes,
   ScrollView,
   Dimensions,
   TouchableOpacity,
@@ -235,7 +235,7 @@ export default class extends Component {
   initState(props, updateIndex = false) {
     // set the current state
     const state = this.state || { width: 0, height: 0, offset: { x: 0, y: 0 } };
-
+ 
     const initState = {
       autoplayEnd: false,
       children: null,

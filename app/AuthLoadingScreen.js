@@ -1,8 +1,21 @@
 import React from 'react'
-import { View } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
 
-export default function AuthLoadingScreen() {
+import { AuthStack } from './navigation/AuthStack'
+import { AppStack } from './navigation/Appstack'
+
+export default function AuthLoadingScreen({
+    userToken = ''
+}) {
+    const Stack = createStackNavigator()
+
     return (
-        <View> AuthLoadingScreen </View>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            {
+                userToken ? <Stack.Screen name="AppStack" component={AppStack} /> : <Stack.Screen name="AuthStack" component={AuthStack} />
+            }
+        </Stack.Navigator>
     )
 }
+
+

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import config from '.';
 // import {
 //     AccessToken,
@@ -22,10 +22,10 @@ let user = null;
 class Backend {
 
     constructor() {
-        // GoogleSignin.configure({
-        //     webClientId: config.webClientId,
-        //     offlineAccess: false,
-        // });
+        GoogleSignin.configure({
+            webClientId: config.webClientId,
+            offlineAccess: false,
+        });
     }
 
     async handleFacebookLogin() {
@@ -108,35 +108,35 @@ class Backend {
         }
     }
 
-    // firebaseGoogleLogin = async (cb) => {
-    //     try {
-    //         // add any configuration settings here:
-    //         await GoogleSignin.hasPlayServices();
-    //         const userInfo = await GoogleSignin.signIn();
-    //         const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
-    //         const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
-    //         cb(true, userInfo)
-    //         console.warn(JSON.stringify(firebaseUserCredential.user.toJSON()));
-    //     } catch (error) {
-    //         if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-    //             // user cancelled the login flow
-    //             console.log("user cancelled the login flow");
-    //             cb(false)
-    //         } else if (error.code === statusCodes.IN_PROGRESS) {
-    //             // operation (f.e. sign in) is in progress already
-    //             console.log("operation (f.e. sign in) is in progress already");
-    //             cb(false)
-    //         } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-    //             // play services not available or outdated
-    //             console.log("play services not available or outdated");
-    //             cb(false)
-    //         } else {
-    //             // some other error happened
-    //             console.log("some other error happened");
-    //             cb(false)
-    //         }
-    //     }
-    // }
+    firebaseGoogleLogin = async (cb) => {
+        try {
+            // add any configuration settings here:
+            await GoogleSignin.hasPlayServices();
+            const userInfo = await GoogleSignin.signIn();
+            const credential = firebase.auth.GoogleAuthProvider.credential(userInfo.idToken, userInfo.accessToken)
+            const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
+            cb(true, userInfo)
+            console.warn(JSON.stringify(firebaseUserCredential.user.toJSON()));
+        } catch (error) {
+            if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+                // user cancelled the login flow
+                console.log("user cancelled the login flow");
+                cb(false)
+            } else if (error.code === statusCodes.IN_PROGRESS) {
+                // operation (f.e. sign in) is in progress already
+                console.log("operation (f.e. sign in) is in progress already");
+                cb(false)
+            } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+                // play services not available or outdated
+                console.log("play services not available or outdated");
+                cb(false)
+            } else {
+                // some other error happened
+                console.log("some other error happened");
+                cb(false)
+            }
+        }
+    }
 
 
     onAppleButtonPress = async () => {

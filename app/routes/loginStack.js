@@ -7,7 +7,7 @@ const LoginStack = createStackNavigator(
             getScreen: () => require('../views/auth/WelcomeScreen').default,
         },
         Login: {
-            getScreen: () => require('../views/auth/login').default,
+            getScreen: () => require('../views/auth/Login').default,
         },
         TellUsMore: {
             getScreen: () => require('../views/auth/TellUsMore').default,

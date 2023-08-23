@@ -1,29 +1,36 @@
 import React, { Component } from 'react'
-import { Text, View, Image, SafeAreaView, ScrollView, StatusBar, Platform } from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import { Text, View, Image, SafeAreaView, ScrollView, StatusBar, Platform, TouchableOpacity } from 'react-native'
+// import { TouchableOpacity } from 'react-native-gesture-handler'
 import AppStatusBar from '../../components/common/statusBar'
 import { Colors, Fonts, Layout } from '../../constants'
-import Navigation from '../../lib/Navigation'
+// import Navigation from '../../lib/Navigation'
 import { Pages } from '../../Helpers/react-native-pages';
 import { isNotch, STATUSBAR_HEIGHT } from '../../utils/deviceInfo'
 import backend from '../../config/backend'
+import SplashScreen from 'react-native-splash-screen';
+
 var wide = Layout.width
 export default class WelcomeScreen extends Component {
 
     componentDidMount() {
-
+        SplashScreen.hide()
     }
 
     handleLogin = (id) => {
-        // backend.handleImperativeLogin(id, (status, data) => {
-        //     if (status) {
-        //         console.log(data);
-        //     }
-        // })
+        backend.handleImperativeLogin(id, (status, data) => {
+            if (status) {
+                console.log(data);
+            }
+        })
     }
     render() {
+        console.log('asdf')
+        const { navigation } = this.props
         return (
+
             <SafeAreaView style={{ flex: 1, backgroundColor: Colors.base }}>
+
+
                 <View style={{ backgroundColor: Colors.base, marginTop: 30, flex: 1 }}>
                     <Image style={{ width: wide, flex: 1 }}
                         resizeMode={'stretch'}
@@ -62,7 +69,7 @@ export default class WelcomeScreen extends Component {
                         alignSelf: 'center', borderRadius: 24,
                         justifyContent: 'center', marginTop: 50
                     }} onPress={() => {
-                        Navigation.navigate('Login')
+                        navigation.navigate('Login')
 
                     }}>
                         <Text style={{
@@ -115,7 +122,7 @@ export default class WelcomeScreen extends Component {
                         </TouchableOpacity>
                     </View>
                     <TouchableOpacity
-                        onPress={() => Navigation.navigate('TrainerPlan')}
+                        onPress={() => navigation.navigate('TrainerPlan')}
                         style={{
                             alignSelf: 'center',
                             marginTop: 32, width: wide * 0.9, justifyContent: 'center',
@@ -125,7 +132,7 @@ export default class WelcomeScreen extends Component {
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ color: Colors.borderColor, fontSize: 14 }}>By continuing you agree Next Up</Text>
                             <Text style={{ color: Colors.light, fontFamily: Fonts.Bold, fontSize: 14 }} numberOfLines={2}> Terms of
-                        </Text>
+                            </Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
                             <Text style={{ color: Colors.light, fontFamily: Fonts.Bold, fontSize: 14 }}>Services </Text>
