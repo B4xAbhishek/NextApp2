@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 
 import AuthLoadingScreen from "./app/AuthLoadingScreen";
@@ -13,9 +13,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <NavigationContainer>
-        <AuthLoadingScreen />
-      </NavigationContainer>
+        <NavigationContainer>
+          <AuthLoadingScreen />
+        </NavigationContainer>
     );
   }
 }

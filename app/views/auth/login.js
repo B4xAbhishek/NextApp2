@@ -216,20 +216,21 @@ export default function Login({
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [isbtnEnable, setIsBtnEnable] = useState(false)
+  const [isbtnEnable, setIsBtnEnable] = useState(true)
 
   loginUser = () => {
-    backend.handleLoginWithEmailAndPass(email, password, (status, data) => {
-      if (status) {
-        if (data === 'new') {
-          navigation.navigate('TellUsMore')
-        } else {
-          //navigate to home
-        }
-      } else {
-        alert(data)
-      }
-    })
+    navigation.navigate('TellUsMore')
+    // backend.handleLoginWithEmailAndPass(email, password, (status, data) => {
+    //   if (status) {
+    //     if (data === 'new') {
+    //       navigation.navigate('TellUsMore')
+    //     } else {
+    //       //navigate to home
+    //     }
+    //   } else {
+    //     alert(data)
+    //   }
+    // })
   };
 
 

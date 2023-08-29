@@ -1,5 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
+import { Layout } from './dimensions';
 export const characterLimit = {
   password: 7,
 };
@@ -36,6 +37,45 @@ export const AppURLs = {
 };
 
 export const USER_AUTH = 'USER_AUTH';
+
+export const CONST_VALUES = {
+  WIDE: Layout.width
+}
+
+export const strings = {
+  PLAYERS_COACHES_FANS: 'Players, Coaches and Fans.',
+  CONTINUE_WITH_Apple: 'Continue with Apple',
+  CONTINUE_WITH_Meta: 'Continue with Meta',
+  CONTINUE_WITH_Google: 'Continue with Google',
+  AGREE_NEXT: 'By continuing you agree Next Up',
+  TERMS_SERVICES: 'Terms of Services',
+  PRIVACY_POLICY: 'Privacy Policy',
+  TELL_US_MORE: 'Tell us more',
+  PLAYER: 'Player',
+  COACH: 'Coach',
+  GENDER: 'Gender',
+  SCHOOL: 'School',
+  CLASS_OF: 'Class of',
+  MALE: 'Male',
+  FEMALE: 'Female',
+  CONFIRM: 'Confirm',
+  SELECT_LOCATION: 'Select your location',
+  SEARCH_SCHOOL: 'Search School',
+  STATE: 'STATE',
+  CITY: 'CITY',
+  ENTER_PLAYER_DETAILS: 'Enter Player Details',
+  FIRST_NAME: 'FIRST NAME',
+  LAST_NAME: 'LAST NAME',
+  DATE_OF_BIRTH: 'DATE OF BIRTH',
+  SELECT_DATE: 'SELECT DATE',
+  HEIGHT: 'HEIGHT',
+  WEIGHT: 'WEIGHT',
+  KG: 'KG',
+  SELECT_PLAYER_STYLE: 'Select Player Style',
+  STATS_OF_FOCUS: 'Stats of Focus',
+  WHAT_TYPE_OF_PLAYER: 'What type of player are you?',
+  PLAYER_TYPE_DESCRIPTION: 'Select from the 5 player styles. Just like a game each style will come with different challenges including stats in focus.'
+}
 
 export class UserModel {
 

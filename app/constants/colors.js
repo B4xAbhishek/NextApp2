@@ -13,5 +13,7 @@ export const Colors = {
   borderColor: '#373A44',
   fontGray: '#979797',
   btnUnSelect: '#246BFD',
+  oynxBlue:'#35383F',
+  darkGunMetal:'#1F222A',
   fontColorGray: 'rgba(139,141,148,1)',
 };

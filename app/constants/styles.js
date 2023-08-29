@@ -6,15 +6,156 @@ import { Fonts } from './fonts';
 let wide = Layout.width;
 const STATUSBAR_HEIGHT = getStatusBarHeight();
 export default StyleSheet.create({
+  flex75: {
+    flex: 0.75
+  },
+  flex1: {
+    flex: 1
+  },
+  flex2: {
+    flex: 2
+  },
+  width100:{
+    width:'100%'
+  },
+  baseBg: {
+    backgroundColor: Colors.base
+  },
+  m5: {
+    margin: 5
+  },
+  mt3: {
+    marginTop: 3
+  },
+  mt10: {
+    marginTop: 10
+  },
+  mr10: {
+    marginRight: 10
+  },
+  mt5: {
+    marginTop: 5
+  },
+  mt20: {
+    marginTop: 20
+  },
+  mb3: {
+    marginBottom: 3
+  },
+  mb5: {
+    marginBottom: 5
+  },
+  mb10: {
+    marginBottom: 10
+  },
+  mb15: {
+    marginBottom: 15
+  },
+  mb50: {
+    marginBottom: 50
+  },
+  mh5: {
+    marginHorizontal: 5
+  },
+  mh10: {
+    marginHorizontal: 10
+  },
+  mh20: {
+    marginHorizontal: 20
+  },
+  br15: {
+    borderRadius: 15
+  },
+  br10: {
+    borderRadius: 10
+  },
+  br5: {
+    borderRadius: 5
+  },
+  p10: {
+    padding: 10
+  },
+  p5: {
+    padding: 5
+  },
+  p8: {
+    padding: 8
+  },
+  p15: {
+    padding: 15
+  },
+  pt10: {
+    paddingTop: 10
+  },
+  pt5: {
+    paddingTop: 5
+  },
+  pl10: {
+    paddingLeft: 10
+  },
+  pb15: {
+    paddingBottom: 15
+  },
+  pb5: {
+    paddingBottom: 5
+  },
+  pr5: {
+    paddingRight: 5
+  },
+  pr10: {
+    paddingRight: 10
+  },
+  ph2: {
+    paddingHorizontal: 2
+  },
+  ph5: {
+    paddingHorizontal: 5
+  },
+  ph10: {
+    paddingHorizontal: 10
+  },
+  ph15: {
+    paddingHorizontal: 15
+  },
+  ph20: {
+    paddingHorizontal: 20
+  },
+  alignCenter: {
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  flexRowAlignCenter: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  flexColAlignCenter: {
+    flexDirection: 'column',
+    alignItems: 'center'
+  },
+  flexDirRow: {
+    flexDirection: 'row'
+  },
+  flexDirCol: {
+    flexDirection: 'column'
+  },
   container: {
     flex: 1,
     padding: wide * 0.04,
     backgroundColor: Colors.light,
   },
+  appThemeBgContainer: {
+    flex: 1,
+    backgroundColor: Colors.base,
+  },
   chatBadge: {
     position: 'absolute',
     top: 5,
     right: 5,
+  },
+  titleFont:{
+    color: Colors.light,
+    fontSize: 30,
+    fontFamily: Fonts.Bold
   },
   tabBarItemContainer: {
     flex: 1,
@@ -109,6 +250,19 @@ export default StyleSheet.create({
   bordered: {
     borderWidth: 0.5,
     borderColor: Colors.shade,
+  },
+  oynxBlueBorder: {
+    borderWidth: 1,
+    borderColor: Colors.oynxBlue,
+  },
+  bgGunMetal: {
+    backgroundColor: Colors.darkGunMetal
+  },
+  socialLoginButton: {
+    justifyContent:'center',
+    padding: 10,
+    borderRadius: 15,
+    backgroundColor: Colors.darkGunMetal
   },
   btmborder: {
     marginVertical: 0,
@@ -257,4 +411,12 @@ export default StyleSheet.create({
     bottom: 0,
     right: 0,
   },
+  midSizeLogo:{
+    height: 35, 
+    width: 35
+  },
+  normalSizeLogo:{
+    height: 30, 
+    width: 30
+  }
 });
